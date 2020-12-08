@@ -1,0 +1,11 @@
+---
+
+collections:
+  - name: jjaswanson4.setup_rhel_for_satellite
+    source: https://galaxy.ansible.com
+  - name: jjaswanson4.install_satellite
+    source: https://galaxy.ansible.com
+  - name: jjaswanson4.configure_satellite
+    source: https://galaxy.ansible.com
+  - name: redhat.satellite
+    source: https://cloud.redhat.com/api/automation-hub/
