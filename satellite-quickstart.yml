@@ -17,6 +17,7 @@
       stat:
         path: files/satellite-manifest.zip
       register: manifest_present
+      delegate_to: localhost
     - name: fail if manifest isn't present
       fail:
         msg: manifest isn't presant
