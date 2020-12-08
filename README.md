@@ -4,7 +4,7 @@ This repository is designed to be an introduction to Red Hat Satellite, the redh
 
 ## Usage
 
-First install the requirements with ansible galaxy: `ansible-galaxy collection install collections/requirements.yml`
+First install the requirements with ansible galaxy: `ansible-galaxy collection install requirements.yml`
 
 Then create a quick inventory file and select an option from the table below:
 ```yaml
