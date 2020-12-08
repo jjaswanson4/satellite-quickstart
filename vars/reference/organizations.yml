@@ -1,0 +1,4 @@
+---
+
+- name: example_organization
+  initial_organization: true

@@ -1,0 +1,51 @@
+---
+
+- name: ak-rhel8-dev
+  lifecycle_environment: dev
+  content_view: composite-rhel8
+  release_version: 8
+  content_overrides:
+    - label: ansible-2-for-rhel-8-x86_64-rpms
+    - label: rhel-8-for-x86_64-appstream-rpms
+    - label: rhel-8-for-x86_64-baseos-rpms
+    - label: satellite-tools-6.8-for-rhel-8-x86_64-rpms
+- name: ak-rhel8-qa
+  lifecycle_environment: qa
+  content_view: composite-rhel8
+  release_version: 8
+  content_overrides:
+    - label: ansible-2-for-rhel-8-x86_64-rpms
+    - label: rhel-8-for-x86_64-appstream-rpms
+    - label: rhel-8-for-x86_64-baseos-rpms
+    - label: satellite-tools-6.8-for-rhel-8-x86_64-rpms
+- name: ak-rhel8-prod
+  lifecycle_environment: prod
+  content_view: composite-rhel8
+  release_version: 8
+  content_overrides:
+    - label: ansible-2-for-rhel-8-x86_64-rpms
+    - label: rhel-8-for-x86_64-appstream-rpms
+    - label: rhel-8-for-x86_64-baseos-rpms
+    - label: satellite-tools-6.8-for-rhel-8-x86_64-rpms
+- name: ak-rhel7-dev
+  lifecycle_environment: dev
+  content_view: composite-rhel7
+  release_version: 7Server
+  content_overrides:
+    - label: rhel-7-server-rpms
+    - label: rhel-7-server-satellite-6.8-rpms
+- name: ak-rhel7-qa
+  lifecycle_environment: qa
+  content_view: composite-rhel7
+  release_version: 7Server
+  content_overrides:
+    - label: rhel-7-server-rpms
+    - label: rhel-7-server-satellite-6.8-rpms
+- name: ak-rhel7-prod
+  lifecycle_environment: prod
+  content_view: composite-rhel7
+  release_version: 7Server
+  content_overrides:
+    - label: rhel-7-server-rpms
+    - label: rhel-7-server-satellite-6.8-rpms
+

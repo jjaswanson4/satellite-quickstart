@@ -1,0 +1,19 @@
+---
+
+satellite:
+  admin_username: admin
+  admin_password: changeme
+  version: 6.8
+  installer_options: "{{ lookup('file', 'vars/satellite/installer-options.yml') | from_yaml }}"
+  foreman:
+    settings: "{{ lookup('file', 'vars/satellite/settings.yml') | from_yaml }}"
+    organizations: "{{ lookup('file', 'vars/satellite/organizations.yml') | from_yaml }}"
+    locations: "{{ lookup('file', 'vars/satellite/locations.yml') | from_yaml }}"
+  katello:
+    - organization_name: example_organization
+      manifest: files/satellite-manifest.zip
+      repo_sync_attempts: 1
+      lifecycle_environments: "{{ lookup('file', 'vars/satellite/lifecycle-environments.yml') | from_yaml }}"
+      content_views: "{{ lookup('file', 'vars/satellite/content-views.yml') | from_yaml }}"
+      composite_content_views: "{{ lookup('file', 'vars/satellite/composite-content-views.yml') | from_yaml }}"
+      activation_keys: "{{ lookup('file', 'vars/satellite/activation-keys.yml') | from_yaml }}"

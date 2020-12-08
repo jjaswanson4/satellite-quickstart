@@ -1,0 +1,6 @@
+---
+
+- name: example_location
+  initial_location: true
+  organizations:
+    - name: example_organization

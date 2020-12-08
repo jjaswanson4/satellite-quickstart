@@ -1,0 +1,37 @@
+---
+
+- name: cv-ansible-rhel8
+  description: ansible on RHEL8
+  repos:
+    - repo: Red Hat Ansible Engine 2 for RHEL 8 x86_64 (RPMs)
+      product: Red Hat Ansible Engine
+- name: cv-server-rhel8
+  repos:
+    - repo: Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)
+      product: Red Hat Enterprise Linux for x86_64
+      releasever: 8
+- name: cv-appstream-rhel8
+  repos:
+    - repo: Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+      product: Red Hat Enterprise Linux for x86_64
+      releasever: 8
+- name: cv-satellitetools6.8-rhel8
+  repos:
+    - repo: Red Hat Satellite Tools 6.8 for RHEL 8 x86_64 (RPMs)
+      product: Red Hat Enterprise Linux for x86_64
+- name: cv-server-rhel7
+  repos:
+    - repo: Red Hat Enterprise Linux 7 Server (RPMs)
+      product: Red Hat Enterprise Linux Server
+      releasever: 7Server
+      basearch: x86_64
+- name: cv-extras-rhel7
+  repos:
+    - repo: Red Hat Enterprise Linux 7 Server - Extras (RPMs)
+      product: Red Hat Enterprise Linux Server
+      basearch: x86_64
+- name: cv-satellitetools6.8-rhel7
+  repos:
+    - repo: Red Hat Satellite Tools 6.8 (for RHEL 7 Server) (RPMs)
+      product: Red Hat Enterprise Linux Server
+      basearch: x86_64
