@@ -16,7 +16,7 @@ satellite02.domain.lcl quickstart_option=101
 
 ### Quickstart Options ###
 The variable that controls what runs is defined as `quickstart_option`. See below for valid definitions and descriptions:
-| Name        | Description               | Target Audience                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------|
-| `101`       | Introduction to Satellite | Anyone interested in Satellite, no experience required. Paired with a presentation  |
-| `reference` | Reference Satellite Setup | Anyone interested in seeing a Satellite that conforms to "best practices"           |
+| Name | Description | Target Audience |
+|--- | --- | --- |
+| `101` | Introduction to Satellite | Anyone interested in Satellite, no experience required. Paired with a presentation |
+| `reference` | Reference Satellite Setup | Anyone interested in seeing a Satellite that conforms to "best practices" |
