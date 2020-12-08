@@ -1,0 +1,45 @@
+---
+
+- name: run satellite quickstart
+  hosts:
+    - satellite
+  vars:
+    valid_quickstart_options:
+      - "101"
+      - "reference"
+  pre_tasks:
+    - name: validate quickstart_option
+      fail:
+        msg: "please select a valid quickstart_option: 101, reference"
+      when:
+        - quickstart_option is not defined or quickstart_option not in valid_quickstart_options
+    - name: check for manifest
+      stat:
+        path: files/satellite-manifest.zip
+      register: manifest_present
+    - name: fail if manifest isn't present
+      fail:
+        msg: manifest isn't presant
+      when:
+        - not manifest_present.stat.exists
+    - name: load in the correct vars
+      include_vars:
+        file: "vars/{{ quickstart_option }}/satellite.yml"
+  roles:
+    - jjaswanson4.install_satellite.install_satellite
+  tasks:
+    - name: include configure_foreman role with katello independent pieces
+      include_role:
+        name: jjaswanson4.configure_satellite.configure_foreman
+    - name: build satellite by organization
+      include_role:
+        name: configure_katello
+      loop_control:
+        loop_var: organization
+      loop: "{{ satellite.katello }}"
+    - name: include tasks to create hostgroup after content is available
+      include_role:
+        name: configure_foreman
+      vars:
+        requires_katello_content: true
+
